@@ -9,7 +9,7 @@ function ready(fn) {
 ready(function() {
     var p = document.createElement('p');
     p.innerText = 'I was dynamically added!';
-    p.styles = 'color: red;';
+    p.style.color = 'red';
     
     // Insert new paragraph into body
     document.body.appendChild(p);
