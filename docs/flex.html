@@ -14,20 +14,27 @@
         }
         
         main {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
-
-            flex-direction: column;
-            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             
             height: 100vh;
         }
-
         div {
             width: 25px;
             height: 25px;
             
             margin: 1px;
-
             background-color: beige;
         }
     </style>
