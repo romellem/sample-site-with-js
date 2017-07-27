@@ -13,4 +13,10 @@ ready(function() {
     
     // Insert new paragraph into body
     document.body.appendChild(p);
+    
+    // Link listener
+    document.querySelector('.counter').addEventListener('click', function onClick(e) {
+        var val = parseInt(this.innerText);
+        this.innerText = val + 1;
+    });
 });
