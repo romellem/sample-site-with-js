@@ -1,1 +1,47 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>iOS "click through"</title>
+        <meta name="description" content="iOS click through">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            a:hover {
+              color: red;
+            }
 
+            .button {
+                background: rgba(100, 0, 0, .4);
+                position: absolute;
+                top: 2px;
+                left: 2px;
+
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+
+                border-radius: 5px;
+            }
+
+            .button:hover {
+                background: rgba(0, 100, 0, .4);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#">Some link</a>
+        <div class="button">Click me!</div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function ready() {
+            var button = document.querySelector('.button');
+            button.addEventListener('click', function() {
+              button.parentNode.removeChild(button);
+            });
+        });
+        </script>
+    </body>
+</html>
