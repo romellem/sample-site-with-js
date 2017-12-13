@@ -36,12 +36,31 @@
         <div class="button">Click me!</div>
 
         <script>
-        document.addEventListener('DOMContentLoaded', function ready() {
-            var button = document.querySelector('.button');
-            button.addEventListener('click', function() {
-              button.parentNode.removeChild(button);
-            });
-        });
+document.addEventListener("DOMContentLoaded", function ready() {
+  var button = document.querySelector(".button");
+  button.addEventListener("click", function() {
+    button.parentNode.removeChild(button);
+  });
+  
+  document.querySelector('a').addEventListener("click", function() {
+    window.alert('clicked!');
+  });
+
+  var body = document.body;
+
+  document.addEventListener("touchstart", function() {
+    body.cssText = "pointer-events: none;";
+  });
+
+  document.addEventListener("touchend", function() {
+    body.cssText = "";
+  });
+  
+  button.on('touchstart', function (event) {
+    event.preventDefault();
+  });
+});
+
         </script>
     </body>
 </html>
