@@ -9,57 +9,90 @@
         <style>
             @font-face {
                 font-family: 'CustomFont';
-                src: local('Arial Black'), local('ArialBlack');
-                font-weight: 900;
-            }
-            
-            h1 {
-                font-family: 'CustomFont', sans-serif;
-            }
-            
-            .fw-900 {
-                font-weight: 900;
-            }
-            
-            .custom-font {
-                font-family: 'CustomFont';
-                font-weight: 900;
-            }
-            
-            .arial-black-plain {
-                font-family: "Arial Black";
+                src: local('Arial'), local('arial');
+
+                font-weight: normal;
+                font-style: normal;
             }
 
-        </style>
+            @font-face {
+                font-family: 'CustomFont';
+                src: local('Arial-BoldMT'), local('Arial Bold'), local('arialbd');
+
+                font-weight: 700; /* bold */
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'CustomFont';
+                src: local('Arial Black'), local('Arial-Black');
+
+                font-weight: 900; /* black */
+                font-style: normal;
+            }
+
+            .Fw\(400\) {
+              font-weight: 400;
+            }
+            .Fw\(700\) {
+              font-weight: 700;
+            }
+            .Fw\(900\) {
+              font-weight: 900;
+            }
+            .Fw\(b\) {
+              font-weight: bold;
+            }
+            .Fw\(n\) {
+              font-weight: normal;
+            }
+            .Ff\(CustomFont\) {
+              font-family: 'CustomFont';
+            }
+            .Ff\(ArialBlack\) {
+              font-family: Arial Black;
+            }
+            .Ff\(_q_ArialBlack_q_\) {
+              font-family: 'Arial Black';
+            }
+
+            </style>
+
     </head>
     <body>
-<pre>
-@font-face {
-    font-family: 'CustomFont';
-    src: local('Arial Black'), local('ArialBlack');
-    font-weight: 900;
-}
+        <div class="Fw(n)"></div>
+        <div class="Fw(400)"></div>
+        <div class="Fw(b)"></div>
+        <div class="Fw(700)"></div>
+        <div class="Fw(900)"></div>
 
-h1 {
-    font-family: 'CustomFont', sans-serif;
-}
+        <hr>
 
-.fw-900 {
-    font-weight: 900;
-}
+        <div class="Ff(CustomFont)"></div>
+        <div class="Ff(CustomFont) Fw(400)"></div>
+        <div class="Ff(CustomFont) Fw(700)"></div>
+        <div class="Ff(CustomFont) Fw(900)"></div>
 
-.custom-font {
-    font-family: 'CustomFont';
-    font-weight: 900;
-}
+        <hr>
 
-.arial-black-plain {
-    font-family: "Arial Black";
-}
-</pre>
-        <h1>Has no class</h1>
-        <h1 class="fw-900">Has <kbd>fw-900</kbd> applied</h1>
-        <h1 class="custom-font">Has <kbd>custom-font</kbd> applied</h1>
-        <h1 class="arial-black-plain">Has <kbd>arial-black-plain</kbd> applied</h1>
+        <div class="Ff(ArialBlack)"></div>
+        <div class="Ff(ArialBlack) Fw(400)"></div>
+        <div class="Ff(ArialBlack) Fw(700)"></div>
+        <div class="Ff(ArialBlack) Fw(900)"></div>
+
+        <hr>
+
+        <div class="Ff(_q_ArialBlack_q_)"></div>
+        <div class="Ff(_q_ArialBlack_q_) Fw(400)"></div>
+        <div class="Ff(_q_ArialBlack_q_) Fw(700)"></div>
+        <div class="Ff(_q_ArialBlack_q_) Fw(900)"></div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('div').forEach(function(el) {
+                    el.innerText = el.classList;
+                });
+            });
+        </script>
     </body>
 </html>
