@@ -30,9 +30,23 @@
                 font-weight: 900; /* black */
                 font-style: normal;
             }
-            
-            html {
-                font-size: 24px;
+
+            @font-face {
+                font-family: 'arial';
+                src: local('Arial');
+                font-weight: normal;
+            }
+
+            @font-face {
+                font-family: 'arial-bold';
+                src: local('Arial-BoldMT'), local('Arial Bold'), local('arialbd');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: 'arial-black';
+                src: local('Arial Black');
+                font-weight: normal;
             }
 
             .Fw\(400\) {
@@ -58,6 +72,11 @@
             }
             .Ff\(_q_ArialBlack_q_\) {
               font-family: 'Arial Black';
+            }
+
+            .hcp {
+                font-family: "arial-black", "arial-bold", "arial", Helvetica, sans-serif;
+                font-weight: normal;
             }
 
             </style>
@@ -90,6 +109,13 @@
         <div class="Ff(_q_ArialBlack_q_) Fw(400)"></div>
         <div class="Ff(_q_ArialBlack_q_) Fw(700)"></div>
         <div class="Ff(_q_ArialBlack_q_) Fw(900)"></div>
+        
+        <hr>
+        
+        <div class="hcp"></div>
+        <div class="hcp Fw(400)"></div>
+        <div class="hcp Fw(700)"></div>
+        <div class="hcp Fw(900)"></div>
 
         <script>
             // @link http://youmightnotneedjquery.com/#ready
