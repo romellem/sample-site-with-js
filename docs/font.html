@@ -8,80 +8,85 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             @font-face {
-                font-family: 'CustomFont';
-                src: local('Arial'), local('arial');
+    font-family: 'CustomFont';
+    src: local('Arial'), local('arial');
 
-                font-weight: normal;
-                font-style: normal;
-            }
+    font-weight: normal;
+    font-style: normal;
+}
 
-            @font-face {
-                font-family: 'CustomFont';
-                src: local('Arial-BoldMT'), local('Arial Bold'), local('arialbd');
+@font-face {
+    font-family: 'CustomFont';
+    src: local('Arial-BoldMT'), local('Arial Bold'), local('arialbd');
 
-                font-weight: 700; /* bold */
-                font-style: normal;
-            }
+    font-weight: 700; /* bold */
+    font-style: normal;
+}
 
-            @font-face {
-                font-family: 'CustomFont';
-                src: local('Arial Black'), local('Arial-Black');
+@font-face {
+    font-family: 'CustomFont';
+    src: local('Arial Black'), local('Arial-Black');
 
-                font-weight: 900; /* black */
-                font-style: normal;
-            }
+    font-weight: 900; /* black */
+    font-style: normal;
+}
 
-            @font-face {
-                font-family: 'arial';
-                src: local('Arial');
-                font-weight: normal;
-            }
+@font-face {
+    font-family: 'arial';
+    src: local('Arial');
+    font-weight: normal;
+}
 
-            @font-face {
-                font-family: 'arial-bold';
-                src: local('Arial-BoldMT'), local('Arial Bold'), local('arialbd');
-                font-weight: bold;
-            }
+@font-face {
+    font-family: 'arial-bold';
+    src: local('Arial-BoldMT'), local('Arial Bold'), local('arialbd');
+    font-weight: bold;
+}
 
-            @font-face {
-                font-family: 'arial-black';
-                src: local('Arial Black');
-                font-weight: normal;
-            }
-            
-            html {
-                font-size: 20px;
-            }
-            
-            .hcp {
-                font-family: "arial-black", "arial-bold", "arial", Helvetica, sans-serif;
-                font-weight: normal;
-            }
+@font-face {
+    font-family: 'arial-black';
+    src: local('Arial Black'), local('Arial-Black');
+    font-weight: normal;
+}
 
-            .Fw\(400\) {
-              font-weight: 400;
-            }
-            .Fw\(700\) {
-              font-weight: 700;
-            }
-            .Fw\(900\) {
-              font-weight: 900;
-            }
-            .Fw\(b\) {
-              font-weight: bold;
-            }
-            .Fw\(n\) {
-              font-weight: normal;
-            }
-            .Ff\(CustomFont\) {
-              font-family: 'CustomFont';
-            }
-            .Ff\(ArialBlack\) {
-              font-family: Arial Black;
-            }
-            .Ff\(_q_ArialBlack_q_\) {
-              font-family: 'Arial Black';
-            }
+html {
+    font-size: 20px;
+}
+
+.hcp {
+    font-family: "arial-black", "arial-bold", "arial", Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.hcp-b {
+    font-family: "arial-black", "Arial Black", sans-serif;
+    font-weight: normal;
+}
+
+.Fw\(400\) {
+  font-weight: 400;
+}
+.Fw\(700\) {
+  font-weight: 700;
+}
+.Fw\(900\) {
+  font-weight: 900;
+}
+.Fw\(b\) {
+  font-weight: bold;
+}
+.Fw\(n\) {
+  font-weight: normal;
+}
+.Ff\(CustomFont\) {
+  font-family: 'CustomFont';
+}
+.Ff\(ArialBlack\) {
+  font-family: Arial Black;
+}
+.Ff\(_q_ArialBlack_q_\) {
+  font-family: 'Arial Black';
+}
 
             
 
@@ -122,6 +127,13 @@
         <div class="hcp Fw(400)"></div>
         <div class="hcp Fw(700)"></div>
         <div class="hcp Fw(900)"></div>
+        
+        <hr>
+        
+        <div class="hcp-b"></div>
+        <div class="hcp-b Fw(400)"></div>
+        <div class="hcp-b Fw(700)"></div>
+        <div class="hcp-b Fw(900)"></div>
 
         <script>
             // @link http://youmightnotneedjquery.com/#ready
