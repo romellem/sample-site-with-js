@@ -6,8 +6,60 @@
         <title>Hello World</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            @font-face {
+                font-family: 'CustomFont';
+                src: local('Arial Black'), local('ArialBlack');
+                font-weight: 900;
+            }
+            
+            h1 {
+                font-family: 'CustomFont', sans-serif;
+            }
+            
+            .fw-900 {
+                font-weight: 900;
+            }
+            
+            .custom-font {
+                font-family: 'CustomFont';
+                font-weight: 900;
+            }
+            
+            .arial-black-plain {
+                font-family: "Arial Black";
+            }
+
+        </style>
     </head>
     <body>
-        <h1>Hello world!</h1>
+<pre>
+@font-face {
+    font-family: 'CustomFont';
+    src: local('Arial Black'), local('ArialBlack');
+    font-weight: 900;
+}
+
+h1 {
+    font-family: 'CustomFont', sans-serif;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.custom-font {
+    font-family: 'CustomFont';
+    font-weight: 900;
+}
+
+.arial-black-plain {
+    font-family: "Arial Black";
+}
+</pre>
+        <h1>Has no class</h1>
+        <h1 class="fw-900">Has <kbd>fw-900</kbd> applied</h1>
+        <h1 class="custom-font">Has <kbd>custom-font</kbd> applied</h1>
+        <h1 class="arial-black">Has <kbd>arial-black-plain</kbd> applied</h1>
     </body>
 </html>
