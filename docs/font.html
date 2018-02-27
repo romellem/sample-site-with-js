@@ -92,7 +92,16 @@
         <div class="Ff(_q_ArialBlack_q_) Fw(900)"></div>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            // @link http://youmightnotneedjquery.com/#ready
+            function ready(fn) {
+                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+                    fn();
+                } else {
+                    document.addEventListener('DOMContentLoaded', fn);
+                }
+            }
+
+            ready(function() {
                 document.querySelectorAll('div').forEach(function(el) {
                     el.innerText = el.classList;
                 });
